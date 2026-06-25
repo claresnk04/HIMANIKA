@@ -1,0 +1,151 @@
+{
+  "pembina": {
+    "judul": "Pembina",
+    "anggota": [
+      {
+        "jabatan": "Pembina",
+        "nama": "Nama Dosen",
+        "info": "Fakultas Teknik UNY",
+        "foto": "https://via.placeholder.com/150"
+      }
+    ]
+  },
+
+  "inti": {
+    "judul": "Pengurus Inti",
+    "anggota": [
+      {
+        "jabatan": "Ketua Umum",
+        "nama": "Nanang Ikhwan Nadziir",
+        "info": "Pendidikan Teknik Elektronika"
+      }
+    ]
+  },
+
+  "sekretariat": {
+    "judul": "Sekretariat",
+    "anggota": [
+      { "jabatan": "Sekretaris I", "nama": "—" },
+      { "jabatan": "Sekretaris II", "nama": "—" },
+      { "jabatan": "Bendahara I", "nama": "—" },
+      { "jabatan": "Bendahara II", "nama": "—" }
+    ]
+  },
+
+  "ketuaBidang": {
+    "judul": "Ketua Bidang",
+    "anggota": [
+      {
+        "jabatan": "Ketua Bidang I",
+        "nama": "Tyo Arvian Putra",
+        "info": "Pendidikan Teknik Informatika"
+      },
+      {
+        "jabatan": "Ketua Bidang II",
+        "nama": "Claresta Nila Kusuma",
+        "info": "Teknologi Informasi"
+      },
+      {
+        "jabatan": "Ketua Bidang III",
+        "nama": "Redina Audrey Hasibuan",
+        "info": "Teknologi Informasi"
+      }
+    ]
+  },
+
+  "bidang": [
+    {
+      "nama": "Bidang I",
+      "departemen": [
+        {
+          "nama": "Departemen Penalaran",
+          "anggota": [
+            { "jabatan": "Kepala Departemen", "nama": "—" },
+            { "jabatan": "Staff Ahli", "nama": "—" },
+            { "jabatan": "Staff Muda", "nama": "—" },
+            { "jabatan": "Staff", "nama": "—" },
+            { "jabatan": "Staff", "nama": "—" }
+          ]
+        },
+        {
+          "nama": "Departemen Minat & Bakat",
+          "anggota": [
+            { "jabatan": "Kepala Departemen", "nama": "Daffa Taufiqurrahman" },
+            { "jabatan": "Staff Ahli", "nama": "Mitchel Artica" },
+            { "jabatan": "Staff Muda", "nama": "—" },
+            { "jabatan": "Staff", "nama": "—" },
+            { "jabatan": "Staff", "nama": "—" }
+          ]
+        }
+      ]
+    },
+    {
+      "nama": "Bidang II",
+      "departemen": [
+        {
+          "nama": "Departemen PSDM",
+          "anggota": [
+            { "jabatan": "Kepala Departemen", "nama": "—" },
+            { "jabatan": "Staff Ahli", "nama": "—" },
+            { "jabatan": "Staff Muda", "nama": "—" },
+            { "jabatan": "Staff", "nama": "—" },
+            { "jabatan": "Staff", "nama": "—" }
+          ]
+        },
+        {
+          "nama": "Departemen PK",
+          "anggota": [
+            { "jabatan": "Kepala Departemen", "nama": "Muhammad Irfan Harris" },
+            { "jabatan": "Staff Ahli", "nama": "—" },
+            { "jabatan": "Staff Muda", "nama": "—" }
+          ]
+        }
+      ]
+    },
+    {
+      "nama": "Bidang III",
+      "departemen": [
+        {
+          "nama": "Departemen Media Informasi",
+          "anggota": [
+            { "jabatan": "Kepala Departemen", "nama": "Alwan Albari Purnama" },
+            { "jabatan": "Staff Ahli", "nama": "—" },
+            { "jabatan": "Staff Muda", "nama": "—" },
+            { "jabatan": "Staff", "nama": "—" },
+            { "jabatan": "Staff", "nama": "—" }
+          ]
+        },
+        {
+          "nama": "Departemen Jaringan Organisasi",
+          "anggota": [
+            { "jabatan": "Kepala Departemen", "nama": "Muhammad Hanif Alghifari" },
+            { "jabatan": "Staff Ahli", "nama": "—" },
+            { "jabatan": "Staff Muda", "nama": "—" },
+            { "jabatan": "Staff", "nama": "—" },
+            { "jabatan": "Staff", "nama": "—" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "bso": {
+    "judul": "Badan Semi Otonom",
+    "anggota": [
+      { "jabatan": "Direktur", "nama": "Choirul Wisnu Dwiananta" },
+      { "jabatan": "Manager", "nama": "Wahyudin Tri Wijaya" },
+      { "jabatan": "Admin", "nama": "Dian Hermawan" },
+      { "jabatan": "Admin", "nama": "Yohana Lanang Prihanto" },
+      { "jabatan": "Staff Muda", "nama": "—" }
+    ]
+  },
+
+  "dpo": {
+    "judul": "Dewan Pertimbangan Organisasi",
+    "anggota": [
+      { "jabatan": "Koordinator / Ketua", "nama": "Dwi Indriyani" },
+      { "jabatan": "Anggota", "nama": "Muhammad Wildanus Shofi" },
+      { "jabatan": "Anggota", "nama": "Galang Miftahur Ridwan" }
+    ]
+  }
+}

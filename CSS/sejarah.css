@@ -1,0 +1,439 @@
+/* ===================================================== */
+/* RESET & BASE */
+/* ===================================================== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI', sans-serif;
+}
+
+body{
+  background:#f5f7fb;
+  color:#111;
+  transition:0.4s;
+}
+
+body.dark{
+  background:#0b0f1a;
+  color:#fff;
+}
+
+/* ===================================================== */
+/* HERO */
+/* ===================================================== */
+.hero-sejarah{
+  position:relative;
+  min-height:60vh;
+  background:
+    linear-gradient(135deg, rgba(2,6,23,0.9), rgba(2,6,23,0.95)),
+    url("pattern/circuit.png");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+}
+
+.hero-sejarah::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(37,99,235,0.4), transparent 45%),
+    radial-gradient(circle at 70% 70%, rgba(96,165,250,0.35), transparent 45%);
+}
+
+.hero-overlay{
+  position:relative;
+  max-width:800px;
+  padding:40px;
+  z-index:1;
+}
+
+.hero-sejarah h1{
+  font-size:44px;
+  margin-bottom:14px;
+}
+
+.hero-sejarah p{
+  font-size:18px;
+  opacity:0.9;
+}
+
+/* ===================================================== */
+/* SEJARAH */
+/* ===================================================== */
+.sejarah-container{
+  padding:80px 12%;
+}
+
+.sejarah-text{
+  max-width:900px;
+  margin:0 auto 80px;
+  line-height:1.8;
+}
+
+.sejarah-text h2{
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+.sejarah-text p{
+  margin-bottom:16px;
+  color:#334155;
+}
+
+body.dark .sejarah-text p{
+  color:#e5e7eb;
+}
+
+/* ===================================================== */
+/* TIMELINE */
+/* ===================================================== */
+.timeline{
+  max-width:900px;
+  margin:auto;
+  position:relative;
+  padding-left:40px;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:12px;
+  top:0;
+  width:4px;
+  height:100%;
+  background:#2563eb;
+  border-radius:4px;
+}
+
+.timeline h2{
+  text-align:center;
+  margin-bottom:50px;
+  font-size:32px;
+}
+
+.timeline-item{
+  display:flex;
+  gap:30px;
+  margin-bottom:50px;
+  position:relative;
+}
+
+.timeline-item::before{
+  content:"";
+  position:absolute;
+  left:-40px;
+  top:6px;
+  width:18px;
+  height:18px;
+  background:#2563eb;
+  border-radius:50%;
+  box-shadow:0 0 0 6px rgba(37,99,235,0.25);
+}
+
+.timeline-item.highlight::before{
+  background:#facc15;
+  box-shadow:0 0 0 6px rgba(250,204,21,0.3);
+}
+
+.timeline .year{
+  min-width:120px;
+  font-weight:700;
+  color:#2563eb;
+}
+
+.timeline .content{
+  background:#fff;
+  padding:20px 24px;
+  border-radius:14px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.1);
+}
+
+.timeline .content h3{
+  margin-bottom:8px;
+  font-size:18px;
+}
+
+.timeline .content p{
+  font-size:15px;
+  line-height:1.6;
+  color:#334155;
+}
+
+/* Dark Mode Timeline */
+body.dark .timeline::before{ background:#60a5fa; }
+body.dark .timeline-item::before{
+  background:#60a5fa;
+  box-shadow:0 0 0 6px rgba(96,165,250,0.35);
+}
+body.dark .timeline-item.highlight::before{ background:#facc15; }
+body.dark .timeline .year{ color:#93c5fd; }
+body.dark .timeline .content{
+  background:#1e293b;
+  border:1px solid #3b82f6;
+  box-shadow:none;
+}
+body.dark .timeline .content p{ color:#e5e7eb; }
+
+/* ===================================================== */
+/* KABINET LOGO */
+/* ===================================================== */
+.kabinet-title{
+  text-align:center;
+  font-size:32px;
+  font-weight:800;
+  letter-spacing:2px;
+  margin:80px 0 20px;
+  color:#1e3a8a;
+}
+
+body.dark .kabinet-title{
+  color:#93c5fd;
+}
+
+.kabinet-header{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:24px;
+  margin-bottom:80px;
+}
+
+.kabinet-logo{
+  position:relative;
+  width:220px;
+  height:220px;
+}
+
+.kabinet-logo img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  padding:20px;
+  border-radius:28px;
+  background:#fff;
+  transition:0.5s ease;
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+}
+
+.kabinet-logo .logo-dark{
+  opacity:0;
+  transform:scale(0.9);
+}
+
+body.dark .kabinet-logo .logo-light{
+  opacity:0;
+  transform:scale(0.9);
+}
+
+body.dark .kabinet-logo .logo-dark{
+  opacity:1;
+  transform:scale(1);
+  background:#020617;
+  box-shadow:
+    0 0 0 2px rgba(96,165,250,0.6),
+    0 0 40px rgba(96,165,250,0.5);
+}
+
+.kabinet-tagline{
+  font-size:20px;
+  font-weight:600;
+  color:#1e3a8a;
+  text-align:center;
+  max-width:600px;
+  line-height:1.5;
+}
+
+body.dark .kabinet-tagline{
+  color:#93c5fd;
+}
+
+/* ===================================================== */
+/* RESPONSIVE */
+/* ===================================================== */
+@media(max-width:768px){
+  .sejarah-container{
+    padding:60px 8%;
+  }
+
+  .timeline{
+    padding-left:20px;
+  }
+
+  .timeline-item{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .timeline .year{
+    font-size:14px;
+  }
+
+  .kabinet-logo{
+    width:120px;
+    height:120px;
+  }
+
+  .kabinet-title{
+    font-size:24px;
+  }
+
+  .kabinet-tagline{
+    font-size:16px;
+  }
+}
+
+/* ============================== */
+/* LIGHT MODE – FILOSOFI LOGO */
+/* ============================== */
+
+body:not(.dark) .filosofi-logo{
+  background:linear-gradient(180deg,#f8fafc 0%, #eef2ff 40%, #e0e7ff 100%);
+  color:#0f172a;
+}
+
+/* glow divider versi terang */
+body:not(.dark) .filosofi-logo::before{
+  background:linear-gradient(to right, transparent, #2563eb, transparent);
+  box-shadow:0 0 15px rgba(37,99,235,.4);
+}
+
+body:not(.dark) .filosofi-logo h2{
+  color:#1e3a8a;
+  text-shadow:0 0 20px rgba(37,99,235,.15);
+}
+
+/* box utama */
+body:not(.dark) .filosofi-box{
+  background:rgba(255,255,255,.9);
+  border:1px solid rgba(37,99,235,.2);
+  box-shadow:
+    0 20px 50px rgba(37,99,235,.15),
+    inset 0 0 20px rgba(37,99,235,.05);
+}
+
+/* isi teks */
+body:not(.dark) .filosofi-box p{
+  color:#334155;
+}
+
+/* highlight */
+body:not(.dark) .filosofi-box .highlight{
+  color:#2563eb;
+}
+
+
+.filosofi-logo{
+  position:relative;
+  padding:100px 12vw;
+  background:linear-gradient(180deg,#020617 0%, #020617 30%, #020617 100%);
+  color:#e5e7eb;
+  overflow:hidden;
+}
+
+/* glow divider */
+.filosofi-logo::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:70%;
+  height:1px;
+  background:linear-gradient(to right, transparent, #60a5fa, transparent);
+  box-shadow:0 0 20px rgba(96,165,250,.7);
+}
+
+.filosofi-logo h2{
+  text-align:center;
+  font-size:38px;
+  font-weight:800;
+  margin-bottom:50px;
+  color:#93c5fd;
+  letter-spacing:1px;
+}
+
+/* box utama */
+.filosofi-box{
+  max-width:900px;
+  margin:0 auto;
+  padding:50px 60px;
+  background:rgba(15,23,42,.85);
+  border-radius:28px;
+  border:1px solid rgba(96,165,250,.3);
+  box-shadow:
+    0 0 40px rgba(96,165,250,.25),
+    inset 0 0 30px rgba(96,165,250,.05);
+  backdrop-filter:blur(10px);
+}
+
+/* isi teks */
+.filosofi-box p{
+  font-size:18px;
+  line-height:1.8;
+  color:#e2e8f0;
+  margin-bottom:22px;
+  text-align:justify;
+}
+
+/* highlight kalimat penting */
+.filosofi-box .highlight{
+  color:#93c5fd;
+  font-weight:600;
+}
+
+/* mobile */
+@media(max-width:768px){
+  .filosofi-logo{
+    padding:70px 8vw;
+  }
+
+  .filosofi-logo h2{
+    font-size:26px;
+  }
+
+  .filosofi-box{
+    padding:30px;
+  }
+
+  .filosofi-box p{
+    font-size:15px;
+  }
+}
+
+/* ============================== */
+/* DARK MODE – FILOSOFI LOGO */
+/* ============================== */
+
+body.dark .filosofi-logo{
+  background:linear-gradient(180deg,#020617 0%, #020617 100%);
+}
+
+body.dark .filosofi-logo h2{
+  color:#60a5fa;
+  text-shadow:0 0 20px rgba(96,165,250,.5);
+}
+
+body.dark .filosofi-box{
+  background:rgba(2,6,23,.9);
+  border:1px solid rgba(96,165,250,.4);
+  box-shadow:
+    0 0 50px rgba(96,165,250,.35),
+    inset 0 0 40px rgba(96,165,250,.08);
+}
+
+body.dark .filosofi-box p{
+  color:#e5e7eb;
+}
+
+body.dark .filosofi-box .highlight{
+  color:#93c5fd;
+}

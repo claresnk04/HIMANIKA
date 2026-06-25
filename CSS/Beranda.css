@@ -1,0 +1,947 @@
+
+/* ================= HERO ================= */
+.hero{
+  position:relative;
+  min-height:90vh;
+  background:
+    linear-gradient(135deg, rgba(2,6,23,0.9), rgba(2,6,23,0.95)),
+    url("pattern/circuit.png");
+  background-size:cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  padding:40px;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 60px,
+      rgba(37,99,235,0.05) 61px
+    );
+  pointer-events:none;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(37,99,235,0.35), transparent 40%),
+    radial-gradient(circle at 70% 80%, rgba(96,165,250,0.35), transparent 40%);
+  pointer-events:none;
+}
+
+.hero-content{max-width:720px;}
+
+.animate-text{
+  opacity:0;
+  transform:translateY(30px);
+  animation:fadeUp 1s ease forwards;
+}
+
+.animate-text.delay{animation-delay:0.6s;}
+
+@keyframes fadeUp{
+  to{opacity:1; transform:translateY(0);}
+}
+
+.hero h2{font-size:48px;}
+.hero p{margin:20px 0; font-size:18px; opacity:0.9;}
+
+.cta-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 36px;
+  background:var(--tech-primary);
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow:var(--shadow-glow);
+  transition:0.3s;
+}
+
+.cta-btn:hover{
+  transform:scale(1.06);
+  box-shadow:0 0 45px rgba(37,99,235,0.8);
+}
+
+
+/* TEXT ANIMATION */
+.animate-text{
+  opacity:0;
+  transform:translateY(30px);
+  animation:fadeUp 1s ease forwards;
+}
+
+.animate-text.delay{
+  animation-delay:0.6s;
+}
+
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.hero h2{
+  font-size:48px;
+  letter-spacing:1px;
+}
+
+.hero p{
+  margin:20px 0;
+  font-size:18px;
+  opacity:0.9;
+}
+
+/* CTA */
+.cta-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 32px;
+  background:#2563eb;
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 0 20px rgba(37,99,235,0.6);
+  transition:0.3s;
+}
+
+.cta-btn::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+  transform:translateX(-100%);
+}
+
+.cta-btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 35px rgba(37,99,235,0.9);
+}
+
+.cta-btn:hover::after{
+  transform:translateX(100%);
+  transition:0.6s;
+}
+
+/* ================= SECTION ================= */
+.section{
+  padding:70px 12%;
+  text-align:center;
+}
+
+.section h3{
+  font-size:28px;
+  margin-bottom:20px;
+}
+
+.section p{
+  max-width:700px;
+  margin:auto;
+  line-height:1.7;
+}
+
+.section.alt{
+  background:#eef2ff;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+.box{
+  background:#fff;
+  padding:30px;
+  border-radius:14px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ================= VISI MISI ================= */
+.vision-mission{
+  background:linear-gradient(180deg,#f8fafc,#eef2ff);
+}
+
+.vm-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  margin-top:40px;
+  align-items:stretch;
+}
+
+/* VISI – clean, fokus */
+.visi-box{
+  background:#ffffff;
+  padding:40px;
+  border-left:6px solid #2563eb;
+  border-radius:14px;
+  text-align:left;
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+}
+
+.visi-box h4{
+  font-size:22px;
+  margin-bottom:12px;
+  color:#1e3a8a;
+}
+
+/* MISI – lebih “aktif” */
+.misi-box{
+  background:#2563eb;
+  padding:40px;
+  border-radius:14px;
+  color:#ffffff;
+  text-align:left;
+  box-shadow:0 16px 40px rgba(37,99,235,0.4);
+}
+
+.misi-box h4{
+  font-size:22px;
+  margin-bottom:14px;
+}
+
+.misi-box ul{
+  padding-left:18px;
+}
+
+.misi-box li{
+  margin-bottom:10px;
+  line-height:1.6;
+}
+.misi-box{
+  text-align:left;
+}
+
+.misi-list{
+  list-style:none;
+  padding:0;
+  margin-top:20px;
+}
+
+.misi-list li{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  margin-bottom:14px;
+  font-size:16px;
+  line-height:1.6;
+}
+
+/* bullet custom (lebih clean) */
+.misi-list li::before{
+  content:"●";
+  color:#2563eb;
+  font-size:10px;
+  margin-top:6px;
+}
+
+
+
+/* ================= PROGRAM ================= */
+.program{
+  background:#f1f5ff;
+}
+
+.program-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  margin-top:40px;
+}
+
+.program-card{
+  background:#fff;
+  padding:30px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.4s;
+}
+
+.program-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(37,99,235,0.25);
+}
+
+/* ===== ORGANIZATION ADMIN ===== */
+.organization-admin{
+  padding:80px 6%;
+  text-align:center;
+  background:#f8fafc;
+}
+
+.oa-title{
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:14px;
+}
+
+.oa-desc{
+  max-width:820px;
+  margin:0 auto 40px;
+  line-height:1.7;
+  color:#000000;
+}
+
+/* ================= WRAPPER ================= */
+.oa-wrapper{
+  position:relative;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* ================= SCROLL ================= */
+.oa-scroll{
+  display:flex;
+  gap:22px;
+  padding:20px 50px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+}
+.oa-scroll::-webkit-scrollbar{display:none}
+
+/* ================= CARD ================= */
+.oa-card{
+  min-width:200px;
+  background:#fff;
+  border-radius:16px;
+  padding:12px;
+  scroll-snap-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:.4s ease;
+  opacity:.45;
+  transform:scale(.92);
+}
+
+.oa-card img{
+  width:100%;
+  height:130px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.oa-card span{
+  display:block;
+  margin-top:10px;
+  font-weight:600;
+}
+
+/* ================= ACTIVE ================= */
+.oa-card.active{
+  opacity:1;
+  transform:scale(1);
+  box-shadow:0 18px 45px rgba(37,99,235,.35);
+}
+
+/* ================= NAV ================= */
+.oa-nav{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:none;
+  background:#2563eb;
+  color:#fff;
+  font-size:22px;
+  cursor:pointer;
+  z-index:10;
+}
+.oa-nav.left{left:0}
+.oa-nav.right{right:0}
+
+/* ================= DOT ================= */
+.oa-dots{
+  margin-top:16px;
+  display:flex;
+  justify-content:center;
+  gap:8px;
+}
+
+.oa-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#c7d2fe;
+}
+
+.oa-dot.active{
+  background:#2563eb;
+  transform:scale(1.4);
+}
+
+/* ================= FOOT ================= */
+.oa-foot{
+  max-width:820px;
+  margin:40px auto 0;
+  color:#000000;
+}
+
+/* ================= DARK MODE OA ================= */
+body.dark .organization-admin{
+  background:#020617;
+}
+
+body.dark .oa-title{
+  color:#ffffff;
+}
+
+body.dark .oa-subtitle{
+  color:#60a5fa;
+}
+
+body.dark .oa-desc{
+  max-width:820px;
+  margin:0 auto 40px;
+  line-height:1.7;
+  color:#ffffff;
+}
+
+body.dark .oa-card{
+  background:#0f172a;
+  box-shadow:none;
+  border:1px solid #1e3a8a;
+}
+
+body.dark .oa-card h4,
+body.dark .oa-card h5,
+body.dark .oa-card p{
+  color:#ffffff;
+}
+
+body.dark .oa-foot{
+  max-width:820px;
+  margin:40px auto 0;
+  color:#ffffff;
+}
+
+/* NAV DARK */
+body.dark .oa-nav{
+  background:#020617;
+  color:#ffffff;
+  border:1px solid #1e3a8a;
+}
+
+/* SCROLL BAR DARK */
+body.dark .oa-scroll::-webkit-scrollbar-thumb{
+  background:#1e3a8a;
+}
+
+/* GLOW HOVER */
+/* LIGHT */
+.oa-card:hover{
+  transform:translateY(-8px) scale(1.03);
+  box-shadow:0 0 25px rgba(37,99,235,0.35);
+}
+
+/* DARK */
+body.dark .oa-card:hover{
+  box-shadow:0 0 25px rgba(155, 159, 163, 0.5);
+}
+
+/* CARD AKTIF (NYALA SAAT DIKLIK) */
+.oa-card.active{
+  outline:2px solid #2563eb;
+}
+
+body.dark .oa-card.active{
+  outline:2px solid #60a5fa;
+  box-shadow:0 0 30px rgba(96,165,250,0.6);
+}
+
+/* ================= EVENTS ================= */
+.events{
+  background:#f8fafc;
+}
+
+.event-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  margin-top:40px;
+}
+
+.event-card{
+  background:#fff;
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:0.4s;
+}
+
+.event-card:hover{
+  transform:translateY(-8px);
+}
+
+/* ================= ACTIVITY ================= */
+.activity{
+  background:#fff;
+}
+
+.activity-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:30px;
+}
+
+.activity-item{
+  padding:22px;
+  background:#eef2ff;
+  border-radius:14px;
+  transition:0.3s;
+}
+
+.activity-item:hover{
+  background:#dbeafe;
+  transform:translateY(-6px);
+}
+
+/* ================= INFORMATION ================= */
+.info{
+  background:#f8fafc;
+}
+
+.info-list{
+  list-style:none;
+  padding:0;
+  margin:40px auto 0;
+  max-width:720px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.info-list li{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:16px 20px;
+  background:#ffffff;
+  border-radius:14px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.06);
+  transition:0.3s;
+}
+
+.info-list li:hover{
+  transform:translateY(-4px);
+  box-shadow:0 16px 40px rgba(37,99,235,0.2);
+}
+
+.info-list .icon{
+  font-size:22px;
+  flex-shrink:0;
+}
+
+.info-list .text{
+  font-size:16px;
+  font-weight:500;
+  color:#1f2937;
+}
+
+
+/* ================= PERTANYAAN ================= */
+.tanya-section{
+  max-width:900px;
+  margin:80px auto;
+  padding:40px;
+  background:#f8fafc;
+  border-radius:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.1);
+}
+
+.tanya-title{
+  text-align:center;
+  font-size:26px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.tanya-desc{
+  text-align:center;
+  color:#64748b;
+  margin-bottom:40px;
+  font-size:15px;
+}
+
+/* FORM */
+.tanya-form .form-group{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:18px;
+}
+
+.form-group label{
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #334155;
+}
+
+.tanya-form input,
+.tanya-form textarea{
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid #cbd5f5;
+  font-size:14px;
+  transition:.25s;
+}
+
+.tanya-form input:focus,
+.tanya-form textarea:focus{
+  outline:none;
+  border-color:#2563eb;
+  box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+/* BUTTON */
+.btn-kirim{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(135deg,#2563eb,#1e40af);
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.btn-kirim:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(37,99,235,.35);
+}
+
+/* WRAPPER */
+.tanya-wrapper{
+  display:flex;
+  gap:32px;
+}
+
+/* KANAN */
+.tanya-right{
+  background:#f1f5f9;
+  padding:28px;
+  border-radius:16px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.tanya-right h4{
+  margin-bottom:10px;
+}
+
+.tanya-right p{
+  font-size:14px;
+  color:#475569;
+  margin-bottom:20px;
+}
+
+/* ================= BUTTON LOGO ================= */
+.contact-links{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.contact-btn{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 16px;
+  border-radius:14px;
+  background:#ffffff;
+  text-decoration:none;
+  color:#0f172a;
+  font-weight:600;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.contact-btn img{
+  width:24px;
+  height:24px;
+}
+
+.contact-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 26px rgba(0,0,0,.15);
+}
+
+/* ================= DARK MODE ================= */
+body.dark .tanya-section{
+  background:#020617;
+}
+
+body.dark .tanya-title,
+body.dark label{
+  color:#ffffff;
+}
+
+body.dark .tanya-desc{
+  color:#94a3b8;
+}
+
+body.dark input,
+body.dark textarea{
+  background:#0f172a;
+  border:1px solid #1e3a8a;
+  color:#ffffff;
+}
+
+body.dark .tanya-right{
+  background:#020617;
+}
+
+body.dark .contact-btn{
+  background:#0f172a;
+  color:#ffffff;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  .tanya-wrapper{
+    flex-direction:column;
+  }
+}
+
+.contact-btn.wa{
+  background:#dcfce7;
+  color:#065f46;
+}
+
+.contact-btn.wa:hover{
+  box-shadow:0 10px 30px rgba(34,197,94,.4);
+}
+
+body.dark .contact-btn.wa{
+  background:#052e16;
+  color:#22c55e;
+}
+
+.tanya-wrapper{
+  display:flex;
+  gap:40px;
+  align-items:flex-start;
+}
+
+.tanya-left{
+  flex:1.2;
+}
+
+.tanya-right{
+  flex:0.8;
+  background:#f1f5f9;
+  padding:24px;
+  border-radius:14px;
+}
+
+.contact-btn{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:14px;
+  margin-top:12px;
+  background:#fff;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+  color:#111827;
+  box-shadow:0 8px 20px rgba(0,0,0,.06);
+  transition:.3s;
+}
+
+.contact-btn:hover{
+  transform:translateY(-4px);
+}
+
+.contact-btn.wa{
+  background:#dcfce7;
+  color:#065f46;
+}
+
+.tanya-right{
+  flex:0.9;
+  background:#ffffff;
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.contact-title{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:6px;
+  color:#1e293b;
+}
+
+.contact-desc{
+  font-size:14px;
+  color:#64748b;
+  margin-bottom:22px;
+}
+
+.contact-btn{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  margin-bottom:14px;
+  background:#f8fafc;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:600;
+  color:#0f172a;
+  transition:.3s ease;
+}
+
+.contact-btn img{
+  width:22px;
+  height:22px;
+}
+
+.contact-btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* VARIAN WARNA */
+.contact-btn.ig{
+  background:#fdf4ff;
+  color:#86198f;
+}
+
+.contact-btn.wa{
+  background:#dcfce7;
+  color:#065f46;
+}
+
+.contact-btn.mail{
+  background:#eef2ff;
+  color:#1e3a8a;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  .tanya-right{
+    text-align:center;
+  }
+
+  .contact-btn{
+    justify-content:center;
+  }
+}
+
+/* CARD FORM KIRI */
+.tanya-card{
+  background:#ffffff;
+  padding:32px;
+  border-radius:18px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+/* SAMAIN FEEL DENGAN KANAN */
+.tanya-left{
+  flex:1.1;
+}
+
+/* Input lebih “soft” */
+.tanya-form input,
+.tanya-form textarea{
+  background:#f8fafc;
+}
+
+/* Fokus efek */
+.tanya-form input:focus,
+.tanya-form textarea:focus{
+  box-shadow:0 0 0 3px rgba(37,99,235,.15);
+}
+
+/* ================= DARK MODE FORM ================= */
+
+/* Card form */
+body.dark .tanya-card,
+body.dark .tanya-section{
+  background:#020617;
+  box-shadow:0 0 0 1px #1e3a8a;
+}
+
+/* Input & textarea */
+body.dark .tanya-form input,
+body.dark .tanya-form textarea{
+  background:#0f172a;
+  border:1px solid #1e3a8a;
+  color:#e5e7eb; /* teks isi */
+}
+
+/* Placeholder (ini yang bikin hilang tadi) */
+body.dark .tanya-form input::placeholder,
+body.dark .tanya-form textarea::placeholder{
+  color:#64748b;
+  opacity:1; /* penting, jangan transparan */
+}
+
+/* Label */
+body.dark .form-group label{
+  color:#e5e7eb;
+}
+
+/* Judul & deskripsi */
+body.dark .tanya-title{
+  color:#ffffff;
+}
+
+body.dark .tanya-desc{
+  color:#94a3b8;
+}
+
+/* Fokus */
+body.dark .tanya-form input:focus,
+body.dark .tanya-form textarea:focus{
+  border-color:#60a5fa;
+  box-shadow:0 0 0 3px rgba(96,165,250,.25);
+}
+
+/* ================= FIX LOGO TRANSPARAN ================= */
+
+/* Hapus background dari img logo */
+.contact-btn img,
+.logo img,
+.hero img{
+  background: transparent !important;
+}
+
+/* Wrapper tombol logo jangan maksa putih */
+.contact-btn{
+  background: transparent;
+  backdrop-filter: blur(6px);
+  border:1px solid rgba(148,163,184,.25);
+}
+
+/* Dark mode versi lebih cyber */
+body.dark .contact-btn{
+  background: rgba(15,23,42,.6);
+  border:1px solid rgba(96,165,250,.35);
+}
+
+/* Biar logo kelihatan di dark tanpa kotak */
+body.dark .contact-btn img,
+body.dark .hero img,
+body.dark .logo img{
+  filter: drop-shadow(0 0 6px rgba(96,165,250,.5));
+}
