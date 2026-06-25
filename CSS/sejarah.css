@@ -217,11 +217,11 @@ body.dark .kabinet-title{
   width:100%;
   height:100%;
   object-fit:cover;
-  padding:18px;
+  padding:0;
   border-radius:50%;
-  background:#fff;
+  background:transparent;
   transition:0.5s ease;
-  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+  box-shadow:0 15px 40px rgba(0,0,0,0.12);
 }
 
 .kabinet-logo .logo-dark{
