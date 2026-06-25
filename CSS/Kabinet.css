@@ -209,7 +209,12 @@ body::before {
 
 .kabinet-logo {
   width: 140px;
-  margin-bottom: 18px;
+  height: 140px;
+  margin: 0 auto 18px auto;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
   filter: drop-shadow(0 10px 25px rgba(37,99,235,0.35));
 }
 

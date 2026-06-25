@@ -216,9 +216,9 @@ body.dark .kabinet-title{
   inset:0;
   width:100%;
   height:100%;
-  object-fit:contain;
-  padding:20px;
-  border-radius:28px;
+  object-fit:cover;
+  padding:18px;
+  border-radius:50%;
   background:#fff;
   transition:0.5s ease;
   box-shadow:0 15px 40px rgba(0,0,0,0.15);
